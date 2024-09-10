@@ -1,0 +1,446 @@
+@charset "UTF-8";
+
+@import url(reset.css);
+@import url(font.css);
+@import url(common.css);
+@import url(main.css);
+@import url(sub.css);
+
+body {background: #FFEFB8;}
+
+.centerbox1400 {max-width: 1400px; margin: 0 auto;}
+.centerbox1300 {max-width: 1300px; margin: 0 auto; height: 100%;}
+
+:root {
+    --bdrd1:15px 5px 30px 5px; 
+  }
+
+/* header */
+
+header .centerbox1400  {
+    display: flex;
+    justify-content: space-between;
+}
+header nav .gnb  {
+    margin-top: 20px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+header nav .gnb > li  {
+    height: 100%;
+    font-size: 18px;
+    position: relative;
+}
+header nav .gnb > li a  {
+    padding: 15px 60px;
+    display: block;
+    height: 100%;
+    font-family: 'S-CoreDream-5Medium';
+}
+/* header nav .gnb li:hover .lnb {display: block;}
+
+header nav .gnb li .lnb {
+    position: absolute;
+    padding: 10px 40px;
+    background: mediumaquamarine;
+    border-radius: 25px 80px 40px 100px;
+    display: flex;
+    padding: 30px 70px 30px 30px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+header nav .gnb .lnb figure {
+    width: 50px;
+}
+header nav .gnb .lnb figure img {width: 100%;}
+header nav .gnb .lnb ul {margin-left: 20px;}
+header nav .gnb .lnb ul li {}
+header nav .gnb .lnb ul li a {
+    writing-mode: horizontal-tb; 
+    text-align: center; 
+    white-space: nowrap; 
+
+    padding: 5px 0;
+    display: block;
+} */
+
+
+header .spotmenu {
+    height: 50px;
+    display: flex;
+}
+header .spotmenu a {
+    padding: 20px 10px;
+}
+
+/* visual */
+
+#visual {
+    height: 642px;
+    background: url(../images/Firefly\ 시원해\ 보이는\ 생과일\ 음료\,\ 구름과\ 함께\ 떠있는\,\ 하늘배경\ 96787.jpg) center center no-repeat;
+    margin-top: 20px;
+}
+
+#visual .centerbox1300 {
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: space-between; /* 수평 공간을 고르게 분배 */
+    height: 100%;
+    gap: 50px;  /* 좌우 여백 추가 */
+}
+
+#visual .centerbox1300 .text {
+    width: 400px;
+    position: relative;
+}
+
+#visual .centerbox1300 .text span {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* 텍스트를 정확히 수직 중앙에 위치 */
+    font-family: 'S-CoreDream-8Heavy';
+    color: black !important;
+}
+
+#visual .centerbox1300 .text span strong {
+    font-size: 100px;
+    font-family: 'S-CoreDream-9Black';
+    color: #FFC700;
+    -webkit-text-stroke: 4px white; /* 외곽선 두께와 색상 */
+}
+#visual .centerbox1300 figure {width: 200px;}
+#visual .centerbox1300 figure svg {stroke-width:150;stroke-dasharray:15700px; stroke-dashoffset:-15700px; animation:plane 2s forwards}
+@keyframes plane {
+    0% {stroke-dashoffset:-15700px; stroke:#43BBFF;}
+    100% {stroke-dashoffset:0px; stroke: #fff}
+}
+
+#visual .centerbox1300 figure svg .cloud {transform:translateX(-1500px); animation: cloud 2s forwards; opacity: 0;}
+@keyframes cloud {
+    0% {transform:translateX(-1500px); opacity: 0;; }
+    100% {transform:translateX(0px); opacity: 1; }
+}
+
+.page_progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+}
+.page_progress .bar {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: red;
+}
+
+.page_progress2 {
+    position: fixed;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 200px;
+    border-radius: 50px;
+    background: whitesmoke;
+    overflow: hidden;
+}
+.page_progress2 .bar2    {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top,#0092ff, #0048ff);
+    bottom: 0;
+}
+.page_progress2 .bar2::before {
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/wave.png);
+    background-repeat: repeat-x;
+    top: -10px;
+    animation: wave 0.5s infinite linear ;
+}
+.page_progress2 .bar2::after {
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/wave.png);
+    background-repeat: repeat-x;
+    top: -8px;
+    animation: wave 0.5s infinite linear ;
+    opacity: 0.5;
+    animation-delay: 0.25s;
+}
+@keyframes wave {
+    0% {background-position: 0 0;}
+    100% {background-position: -37px 0;} 
+}
+
+section {}
+#section_box #section1    {padding: 150px 0;background: #FFEFB8;}
+#section1 .centerbox1300 {
+    position: relative;
+}
+#section1 .centerbox1300 h2 {
+    position: absolute;
+    z-index: 2;
+    top: -15%;
+    transform: translateX(-10%); /* Adjusts position to avoid cutting off */
+    left: 10px; /* Adds padding to ensure it doesn't touch the very edge */
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: left ;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-slide .tit {font-weight: bold;font-family: 'YeongdeokBlueroad'; margin-top: 10px; font-size: 24px;}
+  .swiper-slide .content  {font-size: 16px; margin-top: 10px;}
+  .swiper-slide .icon {width: 90px; height: 30px; margin-top: 10px;}
+  .swiper-slide .icon img {width: 100%}
+  .swiper-slide button {
+    width: 82px;
+    height: 32px;
+    border-radius: 10px; /* Reduced border-radius to match the more subtle curve */
+    margin-top: 10px;
+    border: 2px solid #0390E0; /* Add a light border to give it a more defined look */
+    font-weight: bold; /* Ensure the text is bold like in the image */
+    color: black; /* Set text color to black */
+    font-family: 'YeongdeokBlueroad';
+}
+
+.mySwiper {width: calc(100% + ((100vw - 100% - 17px) / 2) - 320px); min-height: 200px; margin-left: 320px !important; }
+  .mySwiper figure {max-width: 300px; height: 230px; border-radius: var(--bdrd1); overflow: hidden;}
+  .mySwiper .tit {font-size: 20px; margin-top: 30px; text-align: left;}
+  .mySwiper .content {font-size: 18px; margin-top: 10px; text-align: left; font-family: 'TheJamsil2Light'; color: #777; line-height: 1.4;}
+
+  #section1 .section1_btns {width: 300px; position: absolute; top: 300px;}
+  #section1 .swiper-button-next,
+  #section1 .swiper-button-prev {width: 100px; height: 100px; background: #fff; box-shadow: 10px 10px 30px rgba(0,0,0,0.1); border-radius: var(--bdrd1)}
+  #section1 .swiper-button-prev {left: 0px; right: auto}
+  #section1 .swiper-button-next {left: 110px; right: auto}
+
+  .swiper-button-prev:after {content: url('../images/arrow_prev.jpg') !important;}
+  .swiper-button-next:after {content: url('../images/arrow_next.jpg') !important;}
+
+ /* section2 */
+ #section2 {width: 1816px;  border-radius: 0 480px 135px 0; background: #fff;}
+#section2 .centerbox1400 {
+    padding: 150px 0;
+
+}
+#section2 .centerbox1400 h2     {text-align: center; margin-bottom: 50px;}
+#section2 .content_box .text_box p     {font-size: 22px;text-align: center; font-weight: lighter;}
+#section2 .content_box .text_box p strong    {font-size: 26px; font-weight: bold;}
+#section2 .content_box .text_box p strong span    {font-size: 26px; font-weight: bold; color: red;}
+#section2 .review_box      {margin-top: 150px;}
+#section2 .review_box ul {
+    display: flex;
+    gap: 30px;
+}
+
+#section2 .review_box ul li     {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 415px;
+    height: 322px;
+    background: linear-gradient(180deg, rgba(202, 240, 248, 0.5) 0%, rgba(204, 204, 204, 0.5) 100%); /* 배경 그라데이션, 50% 투명도 */
+    border-radius: 15px; /* 모서리 둥글게 */
+    border: 1px solid rgba(0, 0, 0, 0.02); /* 연한 검정색 테두리, 투명도 2% */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* 그림자 효과, 검은색 25% 투명도 */
+    backdrop-filter: blur(34px); /* 백그라운드 블러 효과 */
+    -webkit-backdrop-filter: blur(34px); /* 백그라운드 블러 효과, 사파리 지원 */
+    padding: 20px 25px;
+}
+#section2 .review_box ul li figure {width: 50px; height: 50px;}
+#section2 .review_box ul li figure img {width:100%;}
+#section2 .review_box ul li a h3     {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+#section2 .review_box ul li a .ex     {
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* section3 */
+
+#section3   {padding: 150px 0; position: relative;}
+#section3::before {content: ""; position: absolute; width: 40%; height: 100%; left: 0;top: 0;}
+#section3 .centerbox1300   {
+    display: flex;
+    gap: 90px;
+}
+#section3 .section3_swiper   {
+    width: 787px;
+    height: 615px;
+    position: relative;
+}
+
+#section3 .swiper_slide   {
+    border-radius: var(--bdrd1);
+    overflow: hidden;
+}
+
+#section3 .text_box  {
+    width: 380px;
+    word-break: keep-all;
+    margin-top: 60px;
+}
+#section3 .text_box strong {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'S-CoreDream-6Bold';
+}
+#section3 .text_box p    {
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 30px 0;
+    color: #aaa;
+    font-weight: lighter;
+}
+#section3 .text_box a  {
+    display: inline-block;
+    padding: 15px 40px;
+    background: skyblue ;
+    color: #fff;
+    font-size: 24px;
+    border-radius: var(--bdrd1);
+}
+#section3 .section3_btns {position: absolute; z-index: 10; right: -66px; display: flex; gap: 10px; bottom: 17px;}
+#section3 .swiper-button-next2,
+#section3 .swiper-button-prev2 {width: 100px; height: 100px; background: #fff; box-shadow: 10px 10px 30px rgba(0,0,0,0.1); cursor: pointer; display: flex; justify-content: center; align-items: center; border-radius: var(--bdrd1);}
+#section3 .swiper-button-prev2 {left: 0px; right: auto}
+#section3 .swiper-button-next2 {left: 110px; right: auto}
+.swiper-button-prev2:after {content: url('../images/arrow_prev.jpg') !important;}
+.swiper-button-next2:after {content: url('../images/arrow_next.jpg') !important;}
+
+
+#section4 {padding: 150px 0; background: white;}
+#section4 .centerbox1300 {
+    position: relative;
+}
+#section4 .centerbox1300 h2 {
+    position: absolute;
+    z-index: 2;
+    top: -15%;
+    transform: translateX(-10%); /* Adjusts position to avoid cutting off */
+    left: 10px; /* Adds padding to ensure it doesn't touch the very edge */
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: left ;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-slide .tit {font-weight: bold;font-family: 'YeongdeokBlueroad'; margin-top: 10px; font-size: 24px;}
+  .swiper-slide .content  {font-size: 16px; margin-top: 10px;}
+  .swiper-slide .icon {width: 90px; height: 30px; margin-top: 10px;}
+  .swiper-slide .icon img {width: 100%}
+  .swiper-slide button {
+    width: 82px;
+    height: 32px;
+    border-radius: 10px; /* Reduced border-radius to match the more subtle curve */
+    margin-top: 10px;
+    border: 2px solid #0390E0; /* Add a light border to give it a more defined look */
+    font-weight: bold; /* Ensure the text is bold like in the image */
+    color: black; /* Set text color to black */
+    font-family: 'YeongdeokBlueroad';
+}
+
+.mySwiper {width: calc(100% + ((100vw - 100% - 17px) / 2) - 320px); min-height: 200px; margin-left: 320px !important; }
+  .mySwiper figure {max-width: 300px; height: 230px; border-radius: var(--bdrd1); overflow: hidden;}
+  .mySwiper .tit {font-size: 20px; margin-top: 30px; text-align: left;}
+  .mySwiper .content {font-size: 18px; margin-top: 10px; text-align: left; font-family: 'TheJamsil2Light'; color: #777; line-height: 1.4;}
+
+  #section4 .section4_btns {width: 300px; position: absolute; top: 300px;}
+  #section4 .swiper-button-next,
+  #section4 .swiper-button-prev {width: 100px; height: 100px; background: #fff; box-shadow: 10px 10px 30px rgba(0,0,0,0.1); border-radius: var(--bdrd1)}
+  #section4 .swiper-button-prev {left: 0px; right: auto}
+  #section4 .swiper-button-next {left: 110px; right: auto}
+
+  .swiper-button-prev:after {content: url('../images/arrow_prev.jpg') !important;}
+  .swiper-button-next:after {content: url('../images/arrow_next.jpg') !important;}
+
+/* footer */
+
+footer {
+    padding: 80px 0;
+}
+footer .centerbox1300    {
+    background: #15B0CD;
+    border-radius: 170px;
+    width: 100%;
+    height: 272px;
+}
+footer .text_box3  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+footer address {
+    width: 40%;
+    font-size: 15px;
+    color: white ;
+    text-align: left ;
+    font-style: normal ;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+footer p {
+    text-align: right ;
+    color: white;
+    width: 40%;
+    margin-top: 70px;
+    margin-right: 50px;
+}
